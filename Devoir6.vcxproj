@@ -127,16 +127,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\Fichiers_Énoncé\BaseDeCode\carte.cpp" />
-    <ClCompile Include="..\Fichiers_Énoncé\BaseDeCode\carte_.cpp" />
-    <ClCompile Include="..\Fichiers_Énoncé\BaseDeCode\main.cpp" />
-    <ClCompile Include="..\Fichiers_Énoncé\BaseDeCode\position.cpp" />
+    <ClCompile Include="carte.cpp" />
+    <ClCompile Include="carte_.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="position.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Fichiers_Énoncé\BaseDeCode\carte.h" />
-    <ClInclude Include="..\Fichiers_Énoncé\BaseDeCode\case.h" />
-    <ClInclude Include="..\Fichiers_Énoncé\BaseDeCode\position.h" />
-    <ClInclude Include="..\Fichiers_Énoncé\BaseDeCode\utilitaires.h" />
+    <ClInclude Include="carte.h" />
+    <ClInclude Include="case.h" />
+    <ClInclude Include="position.h" />
+    <ClInclude Include="utilitaires.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

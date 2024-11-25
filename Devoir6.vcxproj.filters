@@ -15,31 +15,31 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Fichiers_Énoncé\BaseDeCode\main.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Fichiers_Énoncé\BaseDeCode\carte.cpp">
+    <ClCompile Include="carte.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Fichiers_Énoncé\BaseDeCode\carte_.cpp">
+    <ClCompile Include="carte_.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Fichiers_Énoncé\BaseDeCode\position.cpp">
+    <ClCompile Include="position.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Fichiers_Énoncé\BaseDeCode\carte.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="utilitaires.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\Fichiers_Énoncé\BaseDeCode\case.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="position.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\Fichiers_Énoncé\BaseDeCode\position.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="case.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\Fichiers_Énoncé\BaseDeCode\utilitaires.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="carte.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
