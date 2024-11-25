@@ -1,4 +1,4 @@
-/*
+/* 
 * fichier : case.h
 * auteur.e : Marie-Flavie Auclair-Fortier
 * date : 2020

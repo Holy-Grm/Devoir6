@@ -1,4 +1,4 @@
-//
+// je fais un test
 // fichier : main.cpp
 // auteur.e : Vincent Ducharme
 // date : 2016
