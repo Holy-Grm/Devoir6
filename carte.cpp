@@ -1,3 +1,4 @@
+//Bonjour boris
 // fichier : carte.cpp
 // auteur.e : Vincent Ducharme
 // date : 2016
@@ -15,7 +16,7 @@
 #include <cassert>
 
 // **************************************************************
-// Definition des methodes de la classe Carte
+// Definition des methodes de la classe Carte 
 // **************************************************************
 
 // Description: Constructeur de la carte a partir d'un fichier
