@@ -24,3 +24,5 @@ void lireValiderEntier(istream& es_entree, int &s_entier)
     
     assert(es_entree);
 }
+
+// surcharge
