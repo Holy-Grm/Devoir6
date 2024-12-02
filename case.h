@@ -1,7 +1,7 @@
 /* 
 * fichier : case.h
 * auteur.e : Marie-Flavie Auclair-Fortier
-* date : 2020
+* date : 2020asd
 * modifications :
 * description : Ce fichier contient la definition de la classe representant d'une case d'un jeu de demineur
 */

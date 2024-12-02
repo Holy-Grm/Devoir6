@@ -18,12 +18,15 @@
 
 Compteur Carte::getNbMinesAdjacentes(Position e_pos)
 {
-    // a completer
-    // a completer
-    // a completer
-    // a completer
-    // a completer
+    int ligne = e_pos.ligne();
+    int colonne = e_pos.colonne();
+    int pos_ligne = 0;
+    int pos_colonne = 0;
     
+        for (pos_ligne < 2; pos_ligne++) {
+
+    }
+
     return 0;
 }
 
