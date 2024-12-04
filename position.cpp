@@ -24,5 +24,15 @@ void lireValiderEntier(istream& es_entree, int &s_entier)
     
     assert(es_entree);
 }
+// Fait par Oli
+istream& operator>> (istream& in, Position& position)
+{
+    in >> position.ligne >> position.colonne;
+    return in;
+}
 
-// surcharge
+ostream& operator<< (std::ostream& out, Position& position)
+{
+    out << position.ligne << position.colonne;
+    return out;
+}

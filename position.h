@@ -4,7 +4,7 @@
 
 #ifndef POSITION_H
 #define POSITION_H
-
+// Fait par Oli
 class Position {
 private:
     int ligne;   // Représente la ligne de la position
