@@ -1,6 +1,6 @@
 // fichier : carte_.cpp
-// auteur.es : METTEZ VOS NOMS ICI
-// date : 2020
+// auteur.es : Olivier Germain, Kakou Boris sosthene
+// date : 2024
 // modifications :
 // description : Ce fichier contient la definition des methodes A IMPLEMENTER de la classe Carte d'un jeu de demineur
 

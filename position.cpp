@@ -9,6 +9,7 @@
 // post : lit une valeur dans le flux jusqu'à ce qu'elle soit un entier
 
 #include <iostream>
+#include<cassert>
 #include "position.h"
 
 using namespace std;
