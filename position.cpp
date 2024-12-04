@@ -8,6 +8,11 @@
 // pre : le flux est existant et ouvert (diff. de NULL)
 // post : lit une valeur dans le flux jusqu'à ce qu'elle soit un entier
 
+#include <iostream>
+#include "position.h"
+
+using namespace std;
+
 void lireValiderEntier(istream& es_entree, int &s_entier)
 {
     assert(es_entree);
@@ -31,7 +36,7 @@ istream& operator>> (istream& in, Position& position)
     return in;
 }
 
-ostream& operator<< (std::ostream& out, Position& position)
+ostream& operator<< (ostream& out, Position& position)
 {
     out << position.ligne << position.colonne;
     return out;

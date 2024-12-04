@@ -2,8 +2,11 @@
 //  position.h
 //
 
+#include <iostream>
 #ifndef POSITION_H
 #define POSITION_H
+using namespace std;
+
 // Fait par Oli
 class Position {
 private:
@@ -30,8 +33,8 @@ public:
         return colonne;
     }
 
-    friend std::istream& operator>> (std::istream& in, Position& position);
-    friend std::ostream& operator<< (std::ostream& out, Position& position);
+    friend istream& operator>> (istream& in, Position& position);
+    friend ostream& operator<< (ostream& out, Position& position);
 
 };
 
