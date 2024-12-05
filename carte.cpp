@@ -11,9 +11,8 @@
 
 #include "carte.h"
 #include "utilitaires.h"
-
-#include <iomanip>
 #include <cassert>
+#include <iomanip>
 
 // **************************************************************
 // Definition des methodes de la classe Carte 

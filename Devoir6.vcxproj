@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="carte.cpp" />
     <ClCompile Include="carte_.cpp" />
+    <ClCompile Include="case.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="position.cpp" />
   </ItemGroup>

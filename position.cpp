@@ -9,36 +9,36 @@
 // post : lit une valeur dans le flux jusqu'à ce qu'elle soit un entier
 
 #include <iostream>
-#include<cassert>
+#include <cassert>
 #include "position.h"
 
 using namespace std;
 
-void lireValiderEntier(istream& es_entree, int &s_entier)
+void lireValiderEntier(istream& es_entree, int& s_entier)
 {
-    assert(es_entree);
-    
-    while (!(es_entree >> s_entier))
-    {
-        // Afficher un message d'erreur et redemander le numero de ligne
-        cout << "Erreur! Vous devez entrer une nombre entier! " << endl << "Entrez la ligne : ";
-        // Vider le tampon de lecture
-        es_entree.clear();
-        // Ignorer tous les caracteres deja entres
-        es_entree.ignore(numeric_limits<streamsize>::max(), '\n');
-    }
-    
-    assert(es_entree);
+	assert(es_entree);
+
+	while (!(es_entree >> s_entier))
+	{
+		// Afficher un message d'erreur et redemander le numero de ligne
+		cout << "Erreur! Vous devez entrer une nombre entier! " << endl << "Entrez la ligne : ";
+		// Vider le tampon de lecture
+		es_entree.clear();
+		// Ignorer tous les caracteres deja entres
+		es_entree.ignore(numeric_limits<streamsize>::max(), '\n');
+	}
+
+	assert(es_entree);
 }
 // Fait par Oli
-istream& operator>> (istream& in, Position& position)
+istream& operator>> (istream& in, Position& position) // surcharge entre
 {
-    in >> position.ligne >> position.colonne;
-    return in;
+	in >> position._ligne >> position._colonne;
+	return in;
 }
 
-ostream& operator<< (ostream& out, Position& position)
+ostream& operator<< (ostream& out, const Position& position) // surcharge sortie
 {
-    out << position.ligne << position.colonne;
-    return out;
+	out << position._ligne << position._colonne;
+	return out;
 }
