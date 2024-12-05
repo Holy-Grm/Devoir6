@@ -48,65 +48,53 @@ Compteur Carte::getNbMinesAdjacentes(Position e_pos)
 // Fonction pour essayer d'ouvrir une case donnée et ses voisines si nécessaire
 bool Carte::essaieCase(Position e_pos)
 {
-    // Vérifier si la case est déjà ouverte
-    if (m_cases[e_pos.ligne()][e_pos.colonne()].estOuverte())
-    {
-        return true;
-    }
+	if (m_cases[e_pos.ligne()][e_pos.colonne()].estOuverte()) //si est deja ouverte
+	{
+		return true;
+	}
 
-    // Si la case est une mine, retourner faux
-    if (m_cases[e_pos.ligne()][e_pos.colonne()].estUneMine())
-    {
-        return false;
-    }
+	if (m_cases[e_pos.ligne()][e_pos.colonne()].estUneMine()) // si est une mine
+	{
+		return false;
+	}
 
-    // Ouvrir la case courante
-    ouvreCase(e_pos);
+	ouvreCase(e_pos); // si pas deja ouverte ET pas une mine --> ouvre la case
 
-    // Déplacements possibles : (ligne, colonne)
-    const int directions[8][2] = {
-        {-1, -1}, // Haut Gauche
-        {-1, 0},  // Haut
-        {-1, 1},  // Haut Droite
-        {0, -1},  // Gauche
-        {0, 1},   // Droite
-        {1, -1},  // Bas Gauche
-        {1, 0},   // Bas
-        {1, 1}    // Bas Droite
-    };
+	const int directions[8][2] = {     // liste des deplacements (le 8 correspond au nb de deplacement et le 2 puisque tableau de 2 dimensions)
+		{-1, -1}, // Haut Gauche
+		{-1, 0},  // Haut
+		{-1, 1},  // Haut Droite
+		{0, -1},  // Gauche
+		{0, 1},   // Droite
+		{1, -1},  // Bas Gauche
+		{1, 0},   // Bas
+		{1, 1}    // Bas Droite
+	};
 
-    // Parcourir chaque direction
-    for (int i = 0; i < 8; ++i)
-    {
-        int nouvelleLigne = e_pos.ligne() + directions[i][0];
-        int nouvelleColonne = e_pos.colonne() + directions[i][1];
+	for (int i = 0; i < 8; ++i)
+	{
+		int nouvelleLigne = e_pos.ligne() + directions[i][0]; // Prend le premier chiffre de chaque vecteur (axe des X)
+		int nouvelleColonne = e_pos.colonne() + directions[i][1]; // prend le second chiffre de chaque vecteur (axe Y)
+		Position nouvellePos(nouvelleLigne, nouvelleColonne); // objet positions (pour la nouvelle case)
 
-        Position nouvellePos(nouvelleLigne, nouvelleColonne);
-
-        // Vérifier si la position est dans la carte
-        if (estDansCarte(nouvellePos) && !m_cases[nouvelleLigne][nouvelleColonne].estOuverte())
-        {
-            // Si la case n'est pas une mine, l'ouvrir
-            if (!m_cases[nouvelleLigne][nouvelleColonne].estUneMine())
-            {
-                ouvreCase(nouvellePos);
-
-                // Appeler récursivement pour propager l'ouverture
-                essaieCase(nouvellePos);
-            }
-        }
-    }
-
-    return true;
+		if (estDansCarte(nouvellePos) && !m_cases[nouvelleLigne][nouvelleColonne].estOuverte()) // si case valide ET non ouverte.
+		{
+			if (!m_cases[nouvelleLigne][nouvelleColonne].estUneMine()) // si n'est pas une mine
+			{
+				ouvreCase(nouvellePos); // ouvre la case
+				essaieCase(nouvellePos); // appel recursif pour propager
+			}
+		}
+	}
+	return true;
 }
-
 
 // Description: Methode qui calcule le nombre de mines adjacentes pour les cases libres de la carte
 // post : pour chacune des cases qui ne contient pas une mine, on compte le nombre de mines adjacentes
 
 void Carte::compteMinesAdjParCase()
 {
-	//for all the elements of the table call getNbMinesAdj and then change its value to that
+
 	for (int l = 0;l <= nbLignes();l++)
 	{
 		for (int c = 0;c <= nbColonnes();c++)
