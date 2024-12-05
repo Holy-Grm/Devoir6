@@ -6,7 +6,6 @@
 // 03/2018 Marie-Flavie Auclair-Fortier : refactoring du code
 // 11/2019 Marie-Flavie Auclair-Fortier : refactoring du code
 // description : Ce fichier contient un jeu de Demineur
-//
 
 #include "carte.h"
 #include "utilitaires.h"

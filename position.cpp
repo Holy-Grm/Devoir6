@@ -31,7 +31,7 @@ void lireValiderEntier(istream& es_entree, int& s_entier)
 	assert(es_entree);
 }
 // Fait par Oli
-istream& operator>> (istream& in, Position& position) // surcharge entre
+istream& operator>> (istream& in, Position& position) // surcharge entré
 {
 	in >> position._ligne >> position._colonne;
 	return in;
